@@ -1,0 +1,89 @@
+[
+    {
+        "title": "boAt Nirvana Ion",
+        "price": 7990,
+        "discount": 75,
+        "rating": 5.0,
+        "image": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Nirvana_Ion.jpg?v=1697621745",
+        "category": "Earbuds"
+    },
+    {
+        "title": "boAt Airdopes 131",
+        "price": 2990,
+        "discount": 71,
+        "rating": 4.8,
+        "image": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/131_f04f74fd-45d4-4614-85cf-6ccf69c4cf90.jpg?v=1691395049",
+        "category": "Earbuds"
+    },
+    {
+        "title": "boAt Airdopes 161",
+        "price": 2490,
+        "discount": 64,
+        "rating": 4.9,
+        "image": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/AD_161.jpg?v=1686297917",
+        "category": "Earbuds"
+    },
+    
+    {
+        "title": "boAt Airdopes 141",
+        "price": 4490,
+        "discount": 71,
+        "rating": 4.9,
+        "image": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/AD_141.png?v=1703145765",
+        "category": "Earbuds"
+    },
+    {
+        "title": "boAt Nirvana Ion",
+        "price": 7990,
+        "discount": 75,
+        "rating": 5.0,
+        "image": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/191G_1.gif?v=1686650191",
+        "category": "Earbuds"
+    },
+    {
+        "image":"https://cdn.shopify.com/s/files/1/0057/8938/4802/files/ezgif-1-6381642bb4.gif?v=1685013470",
+        "nameonimage":"40 Hour Playback",
+        "title":"boAt Immortal 121",
+        "price":2499,
+        "discount":32,
+        "rating":5.0,
+        "addition1":"Beast Mode",
+        "addition2":"Read RGB LEds",
+        "review":1,
+        "category":"Earbuds"
+    },
+    {
+        "image":"https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_Call_2.webp?v=1698984630",
+        "nameonimage":"BT Calling",
+        "title":"boAt Strom Call 2",
+        "price":6999,
+        "discount":81,
+        "rating":4.8,
+        "addition1":"1.3HZ''HD display",
+        "addition2":"Create OS",
+        "review":21,
+        "category":"Watch"
+    },
+    {
+        "image":"https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Immortal_131.gif?v=1698386535",
+        "nameonimage":"Gamming EarBuds",
+        "title":"boAt Immortal 131",
+        "price":3999,
+        "discount":66,
+        "rating":4.9,
+        "addition1":"40 Hours Playback",
+        "review":39,
+        "category":"Earbuds"
+    },
+    {
+        "image":"https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Immortal_131.gif?v=1698386535",
+        "nameonimage":"Gamming EarBuds",
+        "title":"boAt Immortal 131",
+        "price":3999,
+        "discount":66,
+        "rating":4.9,
+        "addition1":"40 Hours Playback",
+        "review":39,
+        "category":"Earbuds"
+    }
+]
