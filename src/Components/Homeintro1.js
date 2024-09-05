@@ -47,11 +47,11 @@ function Homeintro1() {
                 <div className='w-[100%] h-[65vh] flex gap-[2%]'>
 
                     {ProductData.map((i, index)=> index<4 &&
-                    <div onClick={()=>navigate("/ProductDetails")} className='w-[23%] h-[100%] rounded-xl  bg-[#FAFAFA]'>
-                        <div className='h-[75%] w-[100%] relative '>
+                    <div onClick={()=>{localStorage.setItem("Product",JSON.stringify(i)); navigate("/ProductDetails")}} className='w-[23%] h-[100%] rounded-xl  bg-[#FAFAFA]'>
+                        <div className='h-[75%] w-[100%] relative cursor-pointer'>
                             <img className='h-[100%] w-[100%] rounded-t-xl' src={i.image} ></img>
-                            <div className='bg-black absolute top-3 h-[3vh] rounded-r-md text-[white] text-[10px] font-[600] flex items-center justify-center  w-[17vh]'> Engraving Available</div>
-                            <div className='bg-yellow-400 absolute -bottom-3 left-12 h-[4vh] rounded-md text-[black] text-[14px] font-[700] flex items-center justify-center w-[30vh]'> 120 Hours Playback</div>
+                            <div className='bg-black absolute top-3 h-[3vh] rounded-r-md text-[white] text-[10px] font-[600] flex items-center justify-center  w-[17vh]'>{i.nameonimagesmall}</div>
+                            <div className='bg-yellow-400 absolute -bottom-3 left-12 h-[4vh] rounded-md text-[black] text-[14px] font-[700] flex items-center justify-center w-[30vh]'> {i.nameonimage}</div>
                         </div>
                         <div className='h-[25%] w-[100%]  rounded-b-xl flex gap-3 pt-4 flex-col items-center justify-center'>
                             <div className='h-[20%] w-[100%] flex justify-between '> 
@@ -71,9 +71,9 @@ function Homeintro1() {
                                     <div className='h-[50%] w-[100%]  flex items-center justify-start pl-4'>
                                         <div className='h-[100%] w-[50%] flex items-center gap-1 bg-white'>
                                             <i class="fa fa-star text-[yellow]" aria-hidden="true"></i>
-                                            <h1 className='text-[12px]'>5.0</h1>
+                                            <h1 className='text-[12px]'>{i.rating}</h1>
                                             <h1 className='text-[gray]'>|</h1>
-                                            <h1 className='text-[12px]'>77</h1>
+                                            <h1 className='text-[12px]'>{i.review}</h1>
                                             <i class="fa fa-check-circle-o text-[#00C68C]" aria-hidden="true"></i>
                                         </div>
                                     </div>

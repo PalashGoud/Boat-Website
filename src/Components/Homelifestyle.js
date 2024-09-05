@@ -14,43 +14,43 @@ function Homelifestyle() {
     
                     <div className='w-[100%] h-[84vh]  flex gap-5'>
                       
-                    <div className='h-[100%] w-[24%] rounded-t-3xl '>
+                    <div onClick={()=>navigate("/Manyproduct")}  className='h-[100%] w-[24%] cursor-pointer  rounded-t-3xl '>
                         <div className='h-[85%]rounded-3xl'>
                             <img src='https://www.boat-lifestyle.com/cdn/shop/files/shreyas-chronos-new.png?v=1696843687'></img>
                         </div>
                          <div className='h-[15%] flex flex-col bg-[#D1D9DF] items-center justify-center'>
                             <h1 className='font-[600] text-[26px]'>For Fitness</h1>
-                            <label onClick={()=>navigate("/Manyproduct")} className='text-[16px] font-[700] text-[#2F67B5]'>view all <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></label>
+                            <label className='text-[16px] font-[700] text-[#2F67B5]'>view all <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></label>
                             </div> 
                     </div>
 
-                    <div className='h-[100%] w-[24%] rounded-t-3xl '>
+                    <div onClick={()=>navigate("/Manyproduct")}  className='h-[100%] w-[24%] cursor-pointer rounded-t-3xl '>
                         <div className='h-[85%]rounded-3xl'>
                             <img src='https://www.boat-lifestyle.com/cdn/shop/files/Party_Animal_4.png?v=1685942349'></img>
                         </div>
                          <div className='h-[15%] flex flex-col bg-[#D1D9DF] items-center justify-center'>
                             <h1 className='font-[600] text-[26px]'>For Parties</h1>
-                            <label onClick={()=>navigate("/Manyproduct")} className='text-[16px] font-[700] text-[#2F67B5]'>view all <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></label>
+                            <label  className='text-[16px] font-[700] text-[#2F67B5]'>view all <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></label>
                             </div> 
                     </div>
 
-                    <div className='h-[100%] w-[24%] rounded-t-3xl '>
+                    <div onClick={()=>navigate("/Manyproduct")}  className='h-[100%] w-[24%]  cursor-pointer rounded-t-3xl '>
                         <div className='h-[85%]rounded-3xl'>
                             <img src='https://www.boat-lifestyle.com/cdn/shop/files/Yjaiswal_1.png?v=1717055950'></img>
                         </div>
                          <div className='h-[15%] flex flex-col bg-[#D1D9DF] items-center justify-center'>
                             <h1 className='font-[600] text-[26px]'>For Work</h1>
-                            <label onClick={()=>navigate("/Manyproduct")} className='text-[16px] font-[700] text-[#2F67B5]'>view all <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></label>
+                            <label className='text-[16px] font-[700] text-[#2F67B5]'>view all <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></label>
                             </div> 
                     </div>
 
-                    <div className='h-[100%] w-[24%] rounded-t-3xl '>
+                    <div onClick={()=>navigate("/Manyproduct")}  className='h-[100%] w-[24%] cursor-pointer rounded-t-3xl '>
                         <div className='h-[85%]rounded-3xl'>
                             <img src='https://www.boat-lifestyle.com/cdn/shop/files/Audiophile_5.png?v=1696328658'></img>
                         </div>
                          <div className='h-[15%] flex flex-col bg-[#D1D9DF] items-center justify-center'>
                             <h1 className='font-[600] text-[26px]'>For Audiophiles</h1>
-                            <label onClick={()=>navigate("/Manyproduct")} className='text-[16px] font-[700] text-[#2F67B5]'>view all <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></label>
+                            <label  className='text-[16px] font-[700] text-[#2F67B5]'>view all <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></label>
                             </div> 
                     </div>
                      

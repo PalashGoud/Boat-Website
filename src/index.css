@@ -25,4 +25,7 @@ body{
 .header-h:hover{
   font-weight: 700;
 }
-
+.header-div:hover .header-divv{
+  transition: 1s;
+  opacity: 100%;
+}

@@ -1,30 +1,24 @@
 import React from 'react'
-import Manyproductsdata from '../api/manyproductsdata.json'
+import productData from '../api/productData.json'
+import { useNavigate } from 'react-router-dom'
 function ManyBestSeller() {
+  const navigate = useNavigate()
   return (
     <div className='w-[100%] flex items-center justify-center' >
     <div className=' w-[95%] '>
 
 
         <div className='h-[30vh] w-[100%] flex flex-col '>
-          <div className='h-[40%] text-[24px] font-[700] w-[100%] flex items-center '>Best Sellers</div>
-          <div className='h-[30%]  w-[100%] flex items-center justify-between'>
-            <select className=' h-[50%] w-[10%] border-s-black font-[700]  rounded-md bg-[#EFF4F7] '>
-              <option>Filter By</option></select>
-
-            <select className=' h-[50%]  border-s-black font-[700]  rounded-md bg-[#EFF4F7] '>
-              <option> ↑↓ Sort by:</option>
-            </select>
-          </div>
-          </div>
+          <div  className='h-[40%] text-[24px] font-[700] w-[100%] flex items-center '>Products</div>
+          </div> 
 
           <div className='flex w-[100%]  flex flex-wrap  gap-5  '>
-       
-           {Manyproductsdata.map((i)=>
-            <div className='h-[33vh] w-[32%] rounded-lg bg-[#FAFAFA] flex items-center justify-between'>
+        
+           {productData.filter((i)=> i.category == localStorage.getItem("category") || i.nameonimagesmall == localStorage.getItem("nameonimagesmall")).map((i)=>
+            <div onClick={()=>{localStorage.setItem("Product",JSON.stringify(i)); navigate("/ProductDetails")}} className='h-[33vh] w-[32%] rounded-lg bg-[#FAFAFA] cursor-pointer  flex items-center justify-between'>
               <div className='h-[100%] w-[45%] ml-1 relative rounded-lg '>
                 <img className='h-[100%] w-[100%] rounded-lg' src={i.image}></img>
-                <div className='h-[10%] w-[100%] flex absolute bottom-0 items-center justify-center rounded-b-lg bg-[#FCC50B]'> {i.nameonimage}</div>
+                <div className='h-[10%] w-[100%] flex absolute bottom-0 items-center justify-center text-[12px] font-[700] rounded-b-lg bg-[#FCC50B]'> {i.nameonimage}</div>
               </div>
               <div className='h-[100%] w-[52%] flex flex-col items-center  rounded-r-lg'>
                 <div className='w-[100%] h-[19%] '>
@@ -38,7 +32,7 @@ function ManyBestSeller() {
 
                 </div>
                 <div className='w-[100%] h-[22%] flex items-center justify-start font-[700] text-[16px] '>
-                  {i.name}
+                  {i.title}
                 </div>
                 <div className='w-[100%] h-[15%]  items-center'>
                 <div className='h-[100%] w-[100%] flex items-center   gap-1'>
