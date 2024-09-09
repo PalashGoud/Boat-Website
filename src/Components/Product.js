@@ -9,24 +9,24 @@ function Product() {
 
           <div className='w-[95%]  flex mt-28 '>
             <div className='h-[80vh] w-[6%] flex flex-col items-center justify-start gap-4 sticky top-16'>
-             <div className='h-[12%] w-[85%] bg-[white] border-[1px] border-gray-300 rounded-lg  '>
-                <img className='h-[90%] w-[90%]'src='https://www.boat-lifestyle.com/cdn/shop/products/32011675-2ad8-4b99-9787-895caf201d28_600x.png?v=1642405569' ></img>
+             <div className='h-[12%] w-[85%] bg-[white] border-[1px] border-gray-300 flex items-center justify-center rounded-lg  '>
+                <img className='h-[90%] w-[90%]'src={productobj.imgone} ></img>
              </div>
 
              <div className='h-[12%] w-[85%] bg-[white] border-[1px] border-gray-300 flex items-center justify-center  rounded-lg '>
-                <img className='h-[90%] w-[90%]'src='https://www.boat-lifestyle.com/cdn/shop/files/131-2_38aba448-6aa7-4b85-990c-65edfb738860_600x.jpg?v=1718351476' ></img>
+                <img className='h-[90%] w-[90%]' src={productobj.imgtwo} ></img>
              </div>
 
              <div className='h-[12%] w-[85%] bg-[white] border-[1px] border-gray-300 flex items-center justify-center rounded-lg '>
-                <img className='h-[90%] w-[90%]'src='https://www.boat-lifestyle.com/cdn/shop/products/FeatureImagesAD1314XChargecopy2_700x.jpg?v=1718351991' ></img>
+                <img className='h-[90%] w-[90%]'src={productobj.imgthree} ></img>
              </div>
 
              <div className='h-[12%] w-[85%] bg-[white] border-[1px] border-gray-300 flex items-center justify-center rounded-lg '>
-                <img className='h-[90%] w-[90%]'src='https://www.boat-lifestyle.com/cdn/shop/products/ad131FIAD131TypeCcopy2_700x.jpg?v=1718351991' ></img>
+                <img className='h-[90%] w-[90%]'src={productobj.imgfour} ></img>
              </div>
 
              <div className='h-[12%] w-[85%] bg-[white] border-[1px] border-gray-300 flex items-center justify-center  rounded-lg '>
-                <img className='h-[90%] w-[90%]'src='https://www.boat-lifestyle.com/cdn/shop/products/FeatureImagesAD131VAcopy2_700x.jpg?v=1718351991' ></img>
+                <img className='h-[90%] w-[90%]'src={productobj.imgfive} ></img>
              </div>
             
 
@@ -135,7 +135,35 @@ function Product() {
                 <div className='h-[25vh] w-[100%]'>
                 <div className='h-[20%] w-[100%] gap-2 items-center flex text-[14px]'>
                 <h1 className='font-[700]'>Active Offers</h1></div>
-                <div className='h-[70%] w-[60%] bg-red-200'></div>
+                <div className='h-[70%] w-[60%] flex gap-[8%] '>
+                    <div className='h-[100%] w-[25%] flex flex-col items-center justify-center rounded-lg border-green-600 border-[1px]'> 
+                        <div className='h-[90%] w-[100%] flex flex-col items-center justify-center'>
+                            <div className='h-[50%] w-[90%] flex items-center justify-center text-[11px] font-[600]'> More Than 2 Items</div>
+                            <hr className='h-[2px] bg-black w-[60%] '></hr>
+                            <div className='h-[50%] w-[90%] flex items-center justify-center text-[12px] font-[600] text-[#5656e9]'>Get 5% Off</div>
+                        </div>
+                        <div className='h-[22%] w-[107%] rounded-md bg-green-600 flex items-center justify-center text-[11px] text-[white] font-[700] '>MOST POPULAR</div>
+                    </div>
+
+                    <div className='h-[100%] w-[25%] flex flex-col items-center justify-center rounded-lg border-green-600 border-[1px]'> 
+                        <div className='h-[90%] w-[100%] flex flex-col items-center justify-center'>
+                            <div className='h-[50%] w-[90%] flex items-center justify-center text-[11px] font-[600]'> More Than 5 Items</div>
+                            <hr className='h-[2px] bg-black w-[60%] '></hr>
+                            <div className='h-[50%] w-[90%] flex items-center justify-center text-[12px] font-[600] text-[#5656e9]'>Get 7% Off</div>
+                        </div>
+                        <div className='h-[22%] w-[107%] rounded-md bg-gray-900 flex items-center justify-center text-[11px] text-[white] font-[700] '>BEST VALUE</div>
+                    </div>
+                             
+                    <div className='h-[100%] w-[25%] flex flex-col items-center justify-center rounded-lg border-green-600 border-[1px]'> 
+                        <div className='h-[90%] w-[100%] flex flex-col items-center justify-center'>
+                            <div className='h-[50%] w-[90%] flex items-center justify-center text-[11px] font-[600]'> Corporate Deal</div>
+                            <hr className='h-[2px] bg-black w-[60%] '></hr>
+                            <div className='h-[50%] w-[100%] flex items-center justify-center text-[12px] font-[600] text-[#5656e9]'>Comming Soon</div>
+                        </div>
+                        <div className='h-[22%] w-[107%] rounded-md bg-gray-900 flex items-center justify-center text-[11px] text-[white] font-[700] '>BULK ORDER</div>
+                    </div>         
+
+                </div>
                 </div>
 
                 <div className='h-[23vh] w-[100%]'>

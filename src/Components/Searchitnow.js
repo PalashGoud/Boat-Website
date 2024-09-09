@@ -1,20 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import productData from '../api/productData.json'
 import { useNavigate } from 'react-router-dom'
-function ManyBestSeller() {
-  const navigate = useNavigate()
+function Searchitnow() {
+    const navigate = useNavigate()
+    const [search,SetSearch] = useState("")
   return (
+    
     <div className='w-[100%] flex items-center justify-center' >
     <div className=' w-[95%] '>
 
+         
 
-        <div className='h-[30vh] w-[100%] flex flex-col '>
-          <div  className='h-[40%] text-[24px] font-[700] w-[100%] flex items-center '>Products</div>
-          </div> 
-
-          <div className='w-[100%]  flex flex-wrap  gap-5  '>
+          <div className='w-[100%] mt-16  flex flex-wrap  gap-5  '>
         
-           {productData.filter((i)=> i.category == localStorage.getItem("category") || i.nameonimagesmall == localStorage.getItem("nameonimagesmall")).map((i)=>
+           {productData.filter((i)=>i.title.includes(search)).map((i)=>
             <div onClick={()=>{localStorage.setItem("Product",JSON.stringify(i)); navigate("/ProductDetails")}} className='h-[33vh] w-[32%] rounded-lg bg-[#FAFAFA] cursor-pointer  flex items-center justify-between'>
               <div className='h-[100%] w-[45%] ml-1 relative rounded-lg '>
                 <img className='h-[100%] w-[100%] rounded-lg' src={i.image}></img>
@@ -62,11 +61,11 @@ function ManyBestSeller() {
               </div>
 
             </div>
-           )}
+           )}           
           </div>
       </div>
     </div>
   )
 }
 
-export default ManyBestSeller
+export default Searchitnow

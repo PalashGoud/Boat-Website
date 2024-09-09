@@ -14,7 +14,7 @@ function Homelifestyle() {
     
                     <div className='w-[100%] h-[84vh]  flex gap-5'>
                       
-                    <div onClick={()=>navigate("/Manyproduct")}  className='h-[100%] w-[24%] cursor-pointer  rounded-t-3xl '>
+                    <div onClick={()=>{localStorage.setItem("category","Watch");localStorage.removeItem("nameonimagesmall");navigate("/Manyproduct")}}  className='h-[100%] w-[24%] cursor-pointer  rounded-t-3xl '>
                         <div className='h-[85%]rounded-3xl'>
                             <img src='https://www.boat-lifestyle.com/cdn/shop/files/shreyas-chronos-new.png?v=1696843687'></img>
                         </div>
@@ -24,7 +24,7 @@ function Homelifestyle() {
                             </div> 
                     </div>
 
-                    <div onClick={()=>navigate("/Manyproduct")}  className='h-[100%] w-[24%] cursor-pointer rounded-t-3xl '>
+                    <div onClick={()=>{localStorage.setItem("category","Speakers");localStorage.removeItem("nameonimagesmall");navigate("/Manyproduct")}} className='h-[100%] w-[24%] cursor-pointer rounded-t-3xl '>
                         <div className='h-[85%]rounded-3xl'>
                             <img src='https://www.boat-lifestyle.com/cdn/shop/files/Party_Animal_4.png?v=1685942349'></img>
                         </div>
@@ -34,7 +34,7 @@ function Homelifestyle() {
                             </div> 
                     </div>
 
-                    <div onClick={()=>navigate("/Manyproduct")}  className='h-[100%] w-[24%]  cursor-pointer rounded-t-3xl '>
+                    <div  onClick={()=>{localStorage.setItem("category","Earbuds");localStorage.removeItem("nameonimagesmall");navigate("/Manyproduct")}}  className='h-[100%] w-[24%]  cursor-pointer rounded-t-3xl '>
                         <div className='h-[85%]rounded-3xl'>
                             <img src='https://www.boat-lifestyle.com/cdn/shop/files/Yjaiswal_1.png?v=1717055950'></img>
                         </div>
@@ -44,7 +44,7 @@ function Homelifestyle() {
                             </div> 
                     </div>
 
-                    <div onClick={()=>navigate("/Manyproduct")}  className='h-[100%] w-[24%] cursor-pointer rounded-t-3xl '>
+                    <div onClick={()=>{localStorage.setItem("category","Headphones");localStorage.removeItem("nameonimagesmall");navigate("/Manyproduct")}}  className='h-[100%] w-[24%] cursor-pointer rounded-t-3xl '>
                         <div className='h-[85%]rounded-3xl'>
                             <img src='https://www.boat-lifestyle.com/cdn/shop/files/Audiophile_5.png?v=1696328658'></img>
                         </div>

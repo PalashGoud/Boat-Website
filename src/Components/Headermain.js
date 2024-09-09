@@ -54,20 +54,16 @@ function Headermain() {
           </div>
 
           <div className='header-div'>
-          <select className='header-h cursor-pointer '>
-            <option>More</option>
-            <option>Daily Deals </option>
-            <option>Blogs</option>
-            <option>Refer & Earn</option>
-            <option>Store locator</option>
-            <option>boAt community</option>
-          </select>
+          <label onClick={()=>navigate("/StoreLocator")} className='header-h cursor-pointer '>
+
+            Store locator
+          </label>
           <div className='header-divv opacity-0 h-[2px] w-[70%] ml-[15%] bg-red-600'></div> 
           </div>
         </div>
 
         <div className='h-[50%] pl-3 gap-4 bg-slate-200 w-[25%] flex items-center justify-start bg-red rounded-full'>
-          <i class="fa fa-search" aria-hidden="true"></i>
+          <i onClick={()=> navigate("/Search")} class="fa fa-search" aria-hidden="true"></i>
           <input type="text" className=' bg-slate-200 h-[100%] w-[80%] cursor-pointer' placeholder="Search">
           </input></div>
 
@@ -110,12 +106,12 @@ function Headermain() {
               <div className='h-[70%] w-[90%] rounded-xl flex flex-col items-center bg-gray-100'>
                
                 <div  className='h-[55%] w-[70%]  flex flex-col gap-1 justify-center items-center'>
-                  <div  className='w-[90%] '><label className='text-[12px]'>Email {email}</label> 
+                  <div  className='w-[90%] '><label className='text-[12px]'>Email:- </label> 
                   <input onChange={(e)=> setEmail(e.target.value)} className='h-[6vh] w-[100%] rounded-md flex pl-3 border-[1px] border-gray-400' placeholder='Enter Your Email'></input>
                   </div>
 
 
-                  <div className='w-[90%] '><label className='text-[12px]'>Passsword {password}</label> 
+                  <div className='w-[90%] '><label className='text-[12px]'>Passsword:- {password}</label> 
                   <input type='password' onChange={(e)=> setPassword(e.target.value)} className='h-[6vh] w-[100%] rounded-md flex pl-3 border-[1px] border-gray-400' placeholder='Enter Your Password'></input>
                   </div>
 
@@ -125,6 +121,7 @@ function Headermain() {
                 </div>
                 <div className='h-[15%]  w-[70%] text-[12px] text-[gray]'>By conforming ,you agree to boAt's Term and Conditions and Privacy Policy</div>
               </div>
+
 
             </div>
           </div> : null}
