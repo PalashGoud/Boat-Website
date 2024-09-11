@@ -3,7 +3,8 @@ import productData from '../api/productData.json'
 import { useNavigate } from 'react-router-dom'
 function Searchitnow() {
     const navigate = useNavigate()
-    const [search,SetSearch] = useState("")
+    let search = localStorage.getItem("search")
+    
   return (
     
     <div className='w-[100%] flex items-center justify-center' >
@@ -13,7 +14,7 @@ function Searchitnow() {
 
           <div className='w-[100%] mt-16  flex flex-wrap  gap-5  '>
         
-           {productData.filter((i)=>i.title.includes(search)).map((i)=>
+           {productData.filter((i)=> i.title.toLowerCase().includes(search.toLowerCase()) || i.category.toLowerCase().includes(search.toLowerCase()) ).map((i)=>
             <div onClick={()=>{localStorage.setItem("Product",JSON.stringify(i)); navigate("/ProductDetails")}} className='h-[33vh] w-[32%] rounded-lg bg-[#FAFAFA] cursor-pointer  flex items-center justify-between'>
               <div className='h-[100%] w-[45%] ml-1 relative rounded-lg '>
                 <img className='h-[100%] w-[100%] rounded-lg' src={i.image}></img>

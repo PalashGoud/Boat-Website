@@ -11,6 +11,7 @@ function Headermain() {
   const [showCategory, setshowCategory] = useState(false)
   const [email,setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [search, setSearch] = useState("")
 
   const loginCheck = ()=>{
     let user = UserDetails.filter((i)=> i.email == email )
@@ -63,8 +64,8 @@ function Headermain() {
         </div>
 
         <div className='h-[50%] pl-3 gap-4 bg-slate-200 w-[25%] flex items-center justify-start bg-red rounded-full'>
-          <i onClick={()=> navigate("/Search")} class="fa fa-search" aria-hidden="true"></i>
-          <input type="text" className=' bg-slate-200 h-[100%] w-[80%] cursor-pointer' placeholder="Search">
+          <i onClick={()=> {localStorage.setItem("search",  search) ;navigate("/Search")}} class="fa fa-search" aria-hidden="true"></i>
+          <input onChange={(e)=> setSearch(e.target.value)} type="text" className=' bg-slate-200 h-[100%] w-[80%] cursor-pointer' placeholder="Search">
           </input></div>
 
 
