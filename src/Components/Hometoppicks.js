@@ -21,69 +21,79 @@ function Hometoppicks() {
                         <i className="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
                     </div>
                 </div>
-                
-                <div className='w-full h-auto flex flex-wrap gap-5'>
-                    {ProductData.map((i, index) => 
-                        index > 3 && index < 8 ? (
-                            <div 
-                                key={index} 
-                                onClick={() => {
-                                    localStorage.setItem("Product", JSON.stringify(i));
-                                    navigate("/ProductDetails");
-                                }} 
-                                className='w-full sm:w-[48%] md:w-[30%] lg:w-[23%] h-auto rounded-xl bg-white shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col'
-                            >
-                                <div className='h-[75%] w-full cursor-pointer relative'>
-                                    <img className='h-full w-full rounded-t-xl object-cover' src={i.image} alt={i.nameonimage} />
-                                    <div className='bg-black absolute top-3 h-[3vh] rounded-r-md text-white text-xs font-semibold flex items-center justify-center px-2'> 
-                                        {i.nameonimagesmall}
-                                    </div>
-                                    <div className='bg-yellow-400 absolute -bottom-3 left-12 h-[4vh] rounded-md text-black text-sm font-bold flex items-center justify-center w-[30vh]'> 
-                                        {i.nameonimage}
-                                    </div>
-                                </div>
-                                <div className='h-[25%] w-full rounded-b-xl flex gap-3 pt-4 flex-col items-center justify-center'>
-                                    <div className='h-[20%] w-full flex justify-between'> 
-                                        <b className='font-semibold ml-3 text-sm md:text-base'>{i.title}</b>
-                                        <div className='h-full w-[20%] flex'>
-                                            <div className='h-full w-[45%] rounded-full bg-gray-300'></div>
-                                            <div className='h-full w-[45%] rounded-full mr-3 bg-black'></div>
-                                        </div>
-                                    </div>
-                                    <div className='h-[50%] w-full flex'>
-                                        <div className='h-full w-[60%]'>
-                                            <div className='h-[50%] w-full flex items-center gap-1'>
-                                                <h1 className='font-bold text-lg pl-4'>
-                                                    <i className="fa fa-inr" aria-hidden="true"></i>
-                                                    {Math.floor(i.price * (100 - i.discount) / 100)}
-                                                </h1>
-                                                <h3 className='text-gray-500 line-through text-sm'>
-                                                    <i className="fa fa-inr" aria-hidden="true"></i>
-                                                    {i.price}
-                                                </h3>     
-                                                <h2 className='text-[#00C68C] font-bold text-sm'>{i.discount}% off</h2>
-                                            </div>
-                                            <div className='h-[50%] w-full flex items-center justify-start pl-4'>
-                                                <div className='h-full w-[50%] flex items-center gap-1 bg-white'>
-                                                    <i className="fa fa-star text-yellow-500" aria-hidden="true"></i>
-                                                    <h1 className='text-xs'>{i.rating}</h1>
-                                                    <h1 className='text-gray-500'>|</h1>
-                                                    <h1 className='text-xs'>{i.review}</h1>
-                                                    <i className="fa fa-check-circle-o text-[#00C68C]" aria-hidden="true"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className='h-full w-[40%] flex items-center justify-center'>
-                                            <button className='h-[90%] w-[90%] bg-black text-white rounded-xl transition-colors duration-300 hover:bg-gray-800'>
-                                                Add To Cart
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>  
-                        ) : null
-                    )}
+               
+                    <div className='w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
+          {ProductData.map((i,index) => (
+             index > 3 && index < 8 ? (
+            <div
+              key={i.id}
+              onClick={() => {
+                localStorage.setItem('Product', JSON.stringify(i));
+                navigate('/ProductDetails');
+              }}
+              className='w-full h-auto rounded-xl bg-[#FAFAFA] cursor-pointer'>
+
+              {/* Image Section */}
+              <div className='h-[220px] sm:h-[280px] md:h-[320px] lg:h-[350px] w-full relative'>
+                <img
+                  className='h-full w-full object-cover rounded-t-xl'
+                  src={i.image}
+                  alt={i.title}
+                />
+                <div className='bg-black absolute top-2 sm:top-3 left-0 h-[2.5vh] sm:h-[3vh] rounded-r-md text-white text-[10px] sm:text-[12px] font-semibold flex items-center justify-center px-2'>
+                  {i.nameonimagesmall}
                 </div>
+                <div className='bg-yellow-400 absolute -bottom-2 sm:-bottom-3 left-[15%] sm:left-[20%] h-[3vh] sm:h-[4vh] rounded-md text-black text-[12px] sm:text-[14px] font-bold flex items-center justify-center px-2'>
+                  {i.nameonimage}
+                </div>
+              </div>
+
+              {/* Product Info */}
+              <div className='py-4 px-3'>
+                <div className='flex justify-between items-center'>
+                  <h1 className='font-semibold text-sm sm:text-base'>{i.title}</h1>
+                  <div className='flex gap-1'>
+                    <div className='w-4 h-4 rounded-full bg-gray-300'></div>
+                    <div className='w-4 h-4 rounded-full bg-black'></div>
+                  </div>
+                </div>
+
+                {/* Price Section */}
+                <div className='flex items-center gap-2 my-2'>
+                  <h1 className='font-bold text-sm sm:text-lg'>
+                    <i className='fa fa-inr' aria-hidden='true'></i>
+                    {Math.floor(i.price * (100 - i.discount) / 100)}
+                  </h1>
+                  <h3 className='text-gray-500 line-through text-[10px] sm:text-sm'>
+                    <i className='fa fa-inr' aria-hidden='true'></i>
+                    {i.price}
+                  </h3>
+                  <h2 className='text-green-500 font-semibold text-xs sm:text-sm'>
+                    {i.discount}% off
+                  </h2>
+                </div>
+
+                {/* Rating Section */}
+                <div className='flex items-center gap-1 text-xs sm:text-sm text-gray-500'>
+                  <i className='fa fa-star text-yellow-500'></i>
+                  <span>{i.rating}</span>
+                  <span>|</span>
+                  <span>{i.review} reviews</span>
+                  <i className='fa fa-check-circle text-green-500'></i>
+                </div>
+
+                {/* Add to Cart Button */}
+                <div className='flex justify-center mt-4'>
+                  <button className='h-[35px] sm:h-[40px] w-[90%] bg-black text-white rounded-xl'>
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            ) : null
+          ))}
+        </div>
+
             </div>
         </div>
     );
