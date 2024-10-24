@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background-color: #FFFFFF;
+ 
+  
+
+}
+/* ----------------------------------Header------------------------------------------------- */
+.header{
+  gap: 3%;
+  padding: 0px 20px;
+  box-sizing: border-box;
+  position: fixed;
+  color: black;
+  z-index: 2;
+  background-color: white;
+}
+.logo{
+  height: 5vh;
+}
+
+.header-h:hover{
+  font-weight: 700;
+}
+.header-div:hover .header-divv{
+  transition: 1s;
+  opacity: 100%;
+}
+
+
+
+.locationimage{
+  resize: vertical;
+}
+
+@media (max-width: 1024px) {
+  /* Tablet styling */
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile styling */
+  .container {
+    padding: 10px;
+  }
+
+  .item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
