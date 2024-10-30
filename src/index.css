@@ -30,6 +30,11 @@ body{
   opacity: 100%;
 }
 
+.cat-element:hover{
+  font-weight: 700;
+ 
+}
+
 
 
 .locationimage{

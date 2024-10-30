@@ -17,7 +17,7 @@ function ManyBestSeller() {
         </div>
 
         {/* Products Grid */}
-        <div className='w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+        <div className='w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
           {productData.filter(
             (i) =>
               i.category === localStorage.getItem("category") ||
@@ -33,8 +33,8 @@ function ManyBestSeller() {
             >
               {/* Product Image Section */}
               <div className='relative'>
-                <img className='w-full h-[300px] object-fill' src={i.image} alt={i.title} />
-                <div className='absolute bottom-0 w-full py-1 text-center bg-[#FCC50B] text-[10px] font-bold'>
+                <img className='w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover' src={i.image} alt={i.title} />
+                <div className='absolute bottom-0 w-full py-1 text-center bg-[#FCC50B] text-[16px] font-bold'>
                   {i.nameonimage}
                 </div>
               </div>
@@ -44,14 +44,14 @@ function ManyBestSeller() {
                 {/* Ratings */}
                 <div className='flex items-center gap-1 text-yellow-500'>
                   <i className="fa fa-star" aria-hidden="true"></i>
-                  <span className='text-[12px] font-semibold'>{i.rating}</span>
+                  <span className='text-[16px] font-semibold'>{i.rating}</span>
                   <span className='text-gray-500'>|</span>
-                  <span className='text-[12px] font-medium'>{i.review} reviews</span>
+                  <span className='text-[16px] font-medium'>{i.review} reviews</span>
                   <i className="fa fa-check-circle text-[#00C68C]" aria-hidden="true"></i>
                 </div>
 
                 {/* Title */}
-                <h2 className='font-bold text-lg'>{i.title}</h2>
+                <h2 className='font-bold text-[22px]'>{i.title}</h2>
 
                 {/* Pricing Info */}
                 <div className='flex items-center justify-between'>
@@ -74,13 +74,13 @@ function ManyBestSeller() {
                 </div>
 
                 {/* Additional Features */}
-                <div className='flex items-center justify-center space-x-2'>
-                  <span className='bg-[#EFF4F7] text-[9px] px-2 py-1 rounded-full'>{i.addition1}</span>
-                  <span className='bg-[#EFF4F7] text-[9px] px-2 py-1 rounded-full'>{i.addition2}</span>
+                <div className='flex items-center  justify-center space-x-2'>
+                  <span className='bg-[#EFF4F7] text-[14px] px-2 py-1 rounded-full'>{i.addition1}</span>
+                  <span className='bg-[#EFF4F7] text-[14px] px-2 py-1 rounded-full'>{i.addition2}</span>
                 </div>
 
                 {/* Add To Cart Button */}
-                <button className='mt-3 w-full bg-black text-white py-2 rounded-lg hover:bg-gray-800 transition-colors'>
+                <button className='mt-3 text-[20px] w-full bg-black text-white py-2 rounded-lg hover:bg-gray-800 transition-colors'>
                   Add To Cart
                 </button>
               </div>
