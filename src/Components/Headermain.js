@@ -153,7 +153,7 @@ function Headermain() {
 
       {showCategory == true ?
          <div onMouseLeave={() => setshowCategory(false)} style={{ right: showCategory ? "0" : "100%" }} 
-         className='w-[90%] sm:w-[50%] left-3 duration-300 rounded-lg h-[40vh] sm:h-[30vh] top-[12vh] bg-[#f6f4f4] fixed' >
+         className='w-[90%] sm:w-[60%] left-3 duration-300 rounded-lg h-[40vh] sm:h-[35vh] top-[12vh] bg-[#f6f4f4] fixed' >
          <div className='h-full w-full flex flex-wrap gap-2 sm:gap-3 p-3'>
            <div onClick={() => { localStorage.setItem("category", "Earbuds"); localStorage.removeItem("nameonimagesmall"); navigate("/Manyproduct") }} 
              className='w-[45%] sm:w-[30%] h-[40%] cursor-pointer flex items-center justify-center'>
